@@ -2,7 +2,7 @@
 #include <NewSoftSerial.h>
 #include <TinyGPS.h>
 
-#define compassAddress  0x32 >> 1 //0xC0
+#define compassAddress  0x32 >> 1 
 int slaveAddress;             // This is calculated in the setup() function
 
 byte compassResponseBytes[6];                        // This will hold the raw data from the sensor
@@ -50,7 +50,7 @@ void printFloat(double f, int digits = 2);
 void setup()
 {
 
- while( millis() < 500) { delay(10); }  // The HMC6343 (for example) needs a half second to start from power up
+ while( millis() < 500) { delay(10); }  // The HMC6343 needs a half second to start from power up
 
  Wire.begin();
  
@@ -79,7 +79,6 @@ void loop()
   bool newdata = false;
   unsigned long start = millis();
 
-  // Every 5 seconds we print an update
   while (millis() - start < 500)
   {
     if (feedgps())
@@ -169,10 +168,9 @@ void readCompass()
 bool feedgps()
 {
   while (nss.available())
-  {
-    
+  { 
     char c = nss.read();
-    //Serial.println(c);
+   
     if (gps.encode(c))
     {
       return true;
@@ -195,7 +193,7 @@ float calculateDirection (float lat1, float long1, float lat2, float long2) {
   a2 = cos(lat1) * sin(lat2) - a2;
   a2 = atan2(a1, a2);
   if (a2 < 0.0) {
-  	a2 += TWO_PI;			// modulo operator doesn't seem to work on floats
+  	a2 += TWO_PI;
   }
   return degrees(a2);
 }
