@@ -17,9 +17,9 @@ Hardware:
 
 Software librarys:
 
-*TinyGPS by Mikal Hart  - http://arduiniana.org/libraries/tinygps/
-*NewSoftSerial by Mikal Hart - http://arduiniana.org/libraries/newsoftserial/
-*Wire for I2C communication with the compass - http://www.arduino.cc/en/Reference/Wire
+* TinyGPS by Mikal Hart  - http://arduiniana.org/libraries/tinygps/
+* NewSoftSerial by Mikal Hart - http://arduiniana.org/libraries/newsoftserial/
+* Wire for I2C communication with the compass - http://www.arduino.cc/en/Reference/Wire
 
 
 Finde home detector by Marcus Olsson is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
