@@ -1,5 +1,5 @@
 Find home detector - LilyPad Arduino
----
+===
 
 
 The Find home detector is a device to show me the way home by indicating the direction with a light. It uses a LilyPad, GPS, compass and some LEDs. Using the GPS to get a position and then calculate the direction to the location of my home. The compass is then used to get my heading so it is possible to indicate the direction I should travel.
